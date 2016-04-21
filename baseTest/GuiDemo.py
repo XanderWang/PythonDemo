@@ -20,7 +20,7 @@ class MainPanel(Frame):
         self.dirLabel.grid(row = 0)
         self.nameEntry = Entry(self,font = 18,bd = 2, fg = 'red')
         self.nameEntry.grid(row = 0 , column = 1,columnspan=2)
-        self.quiteButton = Button(self, text='Quit', command=self.selectExcel, relief=GROOVE)
+        self.quiteButton = Button(self, text=u'选择目录', command=self.selectExcel, relief=GROOVE)
         self.quiteButton.grid(row = 0 , column = 3)
 
     def selectExcel(self):
