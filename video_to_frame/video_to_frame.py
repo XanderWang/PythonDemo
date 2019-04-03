@@ -1,13 +1,18 @@
 
 import os
 import sys
+
 import cv2
+
+'''
+将视频按帧保存，然后识别每一帧的图片上的文字
+'''
 
 current_dir = os.path.abspath(os.path.dirname(sys.argv[0]))
 video_path = "{0}{1}video{1}my_video.mp4".format(current_dir, os.sep)
 print("video_path", video_path)
 images_path = "{0}{1}image".format(current_dir, os.sep)
-os.makedirs(images_path,exist_ok=True)
+os.makedirs(images_path, exist_ok=True)
 vidcap = cv2.VideoCapture(video_path)
 success, image = vidcap.read()
 count = 0
